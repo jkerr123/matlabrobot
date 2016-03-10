@@ -51,10 +51,10 @@ end
 
 
 %getSSD(supportWindow, supportWindow2)
- imtool(imageL)
- imtool(supportWindow)
- imtool(searchWindow)
- imtool(closestMatch)
+ %imtool(imageL)
+ %imtool(supportWindow)
+ %imtool(searchWindow)
+ %imtool(closestMatch)
 
    
     
