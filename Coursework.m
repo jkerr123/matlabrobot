@@ -45,9 +45,12 @@ for y=1:15-3
    end
 end
 
- xcord = startX + (xcord - 7)
- ycord = startY + (ycord -7)
-
+ xcord = startX + (xcord - 7);
+ ycord = startY + (ycord -7);
+ 
+ pixelDisp = PIXEL_DISP(startX,startY,xcord,ycord)
+ 
+ imageMap = getDispMap(pixelDisp,imageL,imageR)
 
 
 %getSSD(supportWindow, supportWindow2)
