@@ -3,7 +3,7 @@ function supportWindow = getSupportWindow( image, x,y, size )
 %   Detailed explanation goes here
 
 
-supportWindow = image(x:x+size-1, y:y+size-1)
+supportWindow = image(y:y+size-1, x:x+size-1);
 
 
 

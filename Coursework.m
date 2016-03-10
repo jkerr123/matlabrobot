@@ -1,16 +1,61 @@
-imageL = convertImage('U:\MATLAB Projects\testL.jpg');
-imageR = convertImage('U:\MATLAB Projects\testR.jpg');
+imageL = strcat(pwd,'/testL.jpg');
+imageR = strcat(pwd,'/testR.jpg');
 
-supportWindow = getSupportWindow(imageL, 69, 10, 3);
-supportWindow2 = getSupportWindow(imageR, 69, 10, 3);
+imageL = convertImage(imageL);
+imageR = convertImage(imageR);
 
-searchWindow = getSearchWindow(imageL, 69,10,15);
+startX = 69;
+startY = 10;
 
-getSSD(supportWindow, supportWindow2)
+supportWindow = getSupportWindow(imageL, startX, startY, 3);
 
-imtool(supportWindow)
-imtool(searchWindow)
+searchWindow = getSearchWindow(imageR, startX,startY,15);
+
+
+
+%Searching for the closest match. 
+closestMatch = [];
+smallestSSD= [];
+ xcord=[];
+ ycord=[];
+
+for y=1:15-3
+   for x=1:15-3
+     
+    RightWindow  = getSupportWindow(searchWindow,x,y,3);  
+    SSD = getSSD(supportWindow,RightWindow);
+    
+    if isempty(closestMatch)
+     
+        closestMatch = RightWindow;
+    end
+    
+    if isempty(smallestSSD) || SSD < smallestSSD
+        smallestSSD = SSD;
+        closestMatch = RightWindow;
+        
+  
+        xcord = x;
+        ycord = y;
+    end
+%     'Print'
+     closestMatch
+%     smallestSSD
+    
+   end
+end
+
+ xcord = startX + (xcord - 7)
+ ycord = startY + (ycord -7)
+
+
+
+%getSSD(supportWindow, supportWindow2)
+ imtool(imageL)
+ imtool(supportWindow)
+ imtool(searchWindow)
+ imtool(closestMatch)
 
    
     
-    imwrite(supportWindow, 'U:\MATLAB Projects\testsss.jpg');
+    imwrite(supportWindow, strcat(pwd,'\testsss.jpg'));
