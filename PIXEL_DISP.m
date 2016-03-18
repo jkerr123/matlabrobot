@@ -8,8 +8,8 @@ smallestSSD= [];
  xcord=[];
  ycord=[];
 
-for y=1:15-3
-   for x=1:15-3
+for y=8:15-3
+   for x=8:15-3
      
     RightWindow  = getSupportWindow(searchWindow,x,y,3);  
     SSD = getSSD(supportWindow,RightWindow);
