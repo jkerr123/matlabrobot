@@ -5,6 +5,9 @@ function SSD = getSSD( leftWindow, rightWindow )
 leftAns = 0;
 rightAns = 0;
 
+%leftAns = int64(leftAns)
+%rightAns = int64(rightAns)
+
 for x= 1:3
     for y=1:3
         if leftWindow(x,y) ~= -1
@@ -21,7 +24,12 @@ for x= 1:3
     end
 end
 
-SSDDouble = sum( (leftAns - rightAns).^2 );
+leftAns
+rightAns
+leftWindow
+rightWindow
 
-SSD = uint8(SSDDouble);
+SSD = (leftAns - rightAns).^2;
+
+%SSD = uint8(SSDDouble);
 end

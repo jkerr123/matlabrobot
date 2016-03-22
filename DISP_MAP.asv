@@ -3,16 +3,16 @@ function dispMap = DISP_MAP( imageL, imageR )
 %   Detailed explanation goes here
 dispMap = [];
 
-for xL=2:6
-    for yL=2:6
+for xL=2:100
+    for yL=2:100
     supportWindow = getSupportWindow(imageL, xL, yL);    
-        for xR=8:20
-            for yR=8:20
+        for xR=7:100
+            for yR=7:100
                 
                 if imageR(xR, yR) ~= -1
                     searchWindow = getSearchWindow(imageR, xR,yR);
-                    [pixelDisp, SSD, window] = PIXEL_DISP(searchWindow, supportWindow, xL, yL);
-                    dispMap(xR, yR) = SSD;
+                    [pixelDisp, SSD, window] = PIXEL_DISP(searchWindow, supportWindow, xL, yL)
+                    dispMap(xR, yR) = 
                 end
             end
         end 
