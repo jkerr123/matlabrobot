@@ -1,21 +1,26 @@
-function [DISP, smallestSSD, closestMatch] = PIXEL_DISP(searchWindow, supportWindow, startX, startY)
+function [DISP, smallestSSD, closestMatch] = PIXEL_DISP(searchWindow, supportWindow, startX, startY, SSD)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
 %Searching for the closest match. 
-closestMatch = [];
-smallestSSD= [];
+
  xcord=[];
  ycord=[];
 
-for y=8:15-3
-   for x=8:15-3
+closestMatch = [];
+smallestSSD= [];
+ 
+ % 3 because there is no padding at the moment
+ % padding needs to be added
+for y=0:15
+   for x=0:15
      
-    RightWindow  = getSupportWindow(searchWindow,x,y,3);  
-    SSD = getSSD(supportWindow,RightWindow);
+    % gets the 3x3 grid from the search window to compare it to the left
+    % image search window
+      RightWindow  = getSupportWindow(searchWindow,x,y,3); 
+      SSD = SUPPORT_CMP(supportWindow,RightWindow);
     
-    if isempty(closestMatch)
-     
+    if isempty(closestMatch)     
         closestMatch = RightWindow;
     end
     
