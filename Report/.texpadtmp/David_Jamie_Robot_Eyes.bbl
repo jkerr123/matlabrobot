@@ -32,4 +32,22 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem{githublink}
+{Jamie Kerr}. 2016.
+\newblock Matlabrobot.
+\newblock   (2016).
+\newblock
+\showURL{%
+\url{https://github.com/jkerr123/matlabrobot}}
+
+
+\bibitem{disparitymap}
+{Jay Rambhia}. 2013.
+\newblock Disparity Map.
+\newblock   (2013).
+\newblock
+\showURL{%
+\url{http://www.jayrambhia.com/blog/disparity-maps/}}
+
+
 \end{thebibliography}

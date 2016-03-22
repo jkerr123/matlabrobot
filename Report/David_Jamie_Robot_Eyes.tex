@@ -78,7 +78,7 @@
 
 \begin{abstract}
 
-The team were given the task of creating a disparity map from a pair of stereo images using techniques that were talked about in class.
+The team was given the task of creating a disparity map from a pair of stereo images using techniques that were talked about in class. 
 
 \end{abstract}
 
@@ -88,6 +88,8 @@ The team were given the task of creating a disparity map from a pair of stereo i
 \section{Introduction}
 \vspace{-1ex}
 
+The assignment 
+
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -95,21 +97,60 @@ The team were given the task of creating a disparity map from a pair of stereo i
 \section{Background}
 \vspace{-1ex}
 
+A disparity map \cite{disparitymap} is used to show the difference between a pair of stereo images. The disparity is used to calculate depth information from a combination of the images. 
+
+The disparity value is the value of the shift required to get the minimum sum of squared differences for that pixel or section of the image. 
+
+Stereo pairs are images typically taken with only a slight difference in the distance of the cameras. Preferably the camera settings should be the same and the hardware should be the same as well to ensure that the images are similar. 
+
+%%%%%%%%%%%
+%%%%%%%%%%%
 \section{Description of Algorithm}
 \vspace{-1ex}
 
+The team used a brute force method to gain their results using this method meant that the run time was extremely high due the fact that a disparity value had to be calculated for every pixel of the image. 
+
+
+
 %%%%%%%%%%%
 %%%%%%%%%%%
-\section{Description of Images}
+\section{Description of Images Used}
 \vspace{-1ex}
+
+%Example images + stereo pair that was taken in the labs. 
+
+%%%%%%%%%%%
+%%%%%%%%%%%
 
 \section{Results and Comments}
 \vspace{-1ex}
+
+ \begin{figure}[H]
+\centering
+  \includegraphics[height=50mm]{Figures/First_Result}
+    \caption{First Result}~\label{fig:FirstResult}
+\end{figure} 
+
+The result shown in figure \ref{fig:FirstResult} is the result of running the test on the bookcases image taking the top 20 x 20 pixels of the image.  
+
+The team found that the getSSD function wasn't correctly working since it was either producing 0 or 255 as the final output this was confirmed when the image in figure \ref{fig:SecondResult} was produced. 
+
+ \begin{figure}[H]
+\centering
+  \includegraphics[height=50mm]{Figures/Second_Result}
+    \caption{Second Result}~\label{fig:FirstResult}
+\end{figure} 
+
+%We found that the images that we had been using when doing the resize down to 20 
+
+
 
 \section{Conclusion}
 \vspace{-1ex}
 
 The team had never worked with matlab before and were pleased with what they were able to achieve within this short space of time.
+
+The full source code for the teams work can be found in a git hub repository \cite{githublink}.
 
 \section{Future Work} 
 \vspace{-1ex}
