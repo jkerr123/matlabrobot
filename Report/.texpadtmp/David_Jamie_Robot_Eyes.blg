@@ -1,15 +1,15 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: /Users/davidkenny/Documents/Robot_Eyes_Assignment/Report/.texpadtmp/David_Jamie_Robot_Eyes.aux
+The top-level auxiliary file: /Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.aux
 The style file: ../SIGCHI-Reference-Format.bst
-I found no \citation commands---while reading file /Users/davidkenny/Documents/Robot_Eyes_Assignment/Report/.texpadtmp/David_Jamie_Robot_Eyes.aux
+I found no \citation commands---while reading file /Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ../RobotEyes.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 0 entries,
             5283 wiz_defined-function locations,
-            1217 strings with 14273 characters,
+            1217 strings with 14297 characters,
 and the built_in function-call counts, 83 in all, are:
 = -- 0
 > -- 0
