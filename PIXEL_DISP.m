@@ -28,10 +28,7 @@ for y=2:15-3
         smallestSSD = SSD;
         closestMatch = RightWindow;
         
-  if SSD == 0
-      RightWindow;
-      supportWindow;
-  end
+ 
         xcord = x;
         ycord = y;
     end
