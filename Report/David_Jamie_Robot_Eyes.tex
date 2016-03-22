@@ -1,0 +1,147 @@
+\documentclass[twocolumn]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% STYLES - EDIT THESE WITH CARE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Load basic packages
+\usepackage{balance}  % to better equalize the last page
+\usepackage{graphics} % for EPS, load graphicx instead 
+\usepackage{txfonts}
+\usepackage{times}    % comment if you want LaTeX's default font
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{booktabs}
+%\usepackage{ccicons}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{url}  
+\usepackage{titling}	% allows you to move title up the page
+\usepackage[pdftex]{hyperref}
+
+% font  sizes
+\usepackage{sectsty}			% set font sizes			
+\sectionfont{\Large}			% (assumes default font size 10pt)
+\subsectionfont{\large}
+\subsubsectionfont{\large}
+\paragraphfont{\normalsize}
+
+% positioning
+\setlength{\parindent}{0em}		% remove indent for new paragraph
+\setlength{\parskip}{1em}		% space above paragraph
+\setlength{\columnsep}{2em}		% distance between columns
+\setlength{\droptitle}{-10em}
+
+% llt: Define a global style for URLs, rather that the default one
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\bf\ttfamily}}}
+\makeatother
+\urlstyle{leo}
+
+\usepackage[hyphenbreaks]{breakurl}	% make URLs within one column
+\usepackage[hypens]{url}
+\def\UrlBreaks{\do\/\do-}
+
+% To make various LaTeX processors do the right thing with page size.
+\def\pprw{8.27in}
+\def\pprh{11.69in}
+\special{papersize=\pprw,\pprh}
+\setlength{\paperwidth}{\pprw}
+\setlength{\paperheight}{\pprh}
+\setlength{\pdfpagewidth}{\pprw}
+\setlength{\pdfpageheight}{\pprh}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END OF STYLES 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% TITLE
+\title{Robot Eyes Report}
+\author{David Kenny, Jamie Kerr\\BSc (Hons) Applied Computing}
+\date{March 2016}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MAIN DOCUMENT STARTS HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% BEGIN DOCUMENT
+\begin{document}
+
+% add title
+\maketitle
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\begin{abstract}
+ 
+\end{abstract}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Introduction}
+\vspace{-1ex}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Background}
+\vspace{-1ex}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Specification}
+\vspace{-1ex}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Design}
+\vspace{-1ex}
+
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Implementation and Testing}
+\vspace{-1ex}
+
+
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Evaluation}
+\vspace{-1ex}
+
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Description of the Final Product}
+\vspace{-1ex}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section{Conclusion}
+\vspace{-1ex}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\section*{Acknowledgements}
+
+%%%%%%%%%%%
+%%%%%%%%%%%
+
+\bibliographystyle{SIGCHI-Reference-Format}
+\bibliography{RobotEyes}
+
+% END DOCUMENT
+\end{document}
