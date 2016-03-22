@@ -32,6 +32,13 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem{introssd}
+{Alessandro~Verri Emanuele~Trucco}. 1998.
+\newblock {\em Introductory techniques for 3D - Computer Vision}.
+\newblock Prentice Hall.
+\newblock
+
+
 \bibitem{githublink}
 {Jamie Kerr}. 2016.
 \newblock Matlabrobot.
@@ -41,6 +48,15 @@
 \url{https://github.com/jkerr123/matlabrobot}}
 
 
+\bibitem{sceneusage2}
+{Shawn~Lankton Online}. 2007.
+\newblock 3D Vision with Stereo Disparity.
+\newblock   (2007).
+\newblock
+\showURL{%
+\url{http://www.shawnlankton.com/2007/12/3d-vision-with-stereo-disparity/}}
+
+
 \bibitem{disparitymap}
 {Jay Rambhia}. 2013.
 \newblock Disparity Map.
@@ -48,6 +64,15 @@
 \newblock
 \showURL{%
 \url{http://www.jayrambhia.com/blog/disparity-maps/}}
+
+
+\bibitem{sceneusage}
+{Stanford}. 2016.
+\newblock Correlation-Based stereo.
+\newblock   (2016).
+\newblock
+\showURL{%
+\url{http://ai.stanford.edu/~mitul/cs223b/dp.html}}
 
 
 \end{thebibliography}

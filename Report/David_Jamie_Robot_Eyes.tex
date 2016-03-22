@@ -88,8 +88,7 @@ The team was given the task of creating a disparity map from a pair of stereo im
 \section{Introduction}
 \vspace{-1ex}
 
-The assignment 
-
+The assignment required the team to acquire new experiences in computer vison by using matlab. We were encouraged to experiment with variables and publish our results of the findings. This report details the experiments that the team performed and the notable results that were acquired from them. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -99,9 +98,13 @@ The assignment
 
 A disparity map \cite{disparitymap} is used to show the difference between a pair of stereo images. The disparity is used to calculate depth information from a combination of the images. 
 
-The disparity value is the value of the shift required to get the minimum sum of squared differences for that pixel or section of the image. 
+The disparity value is the value of the shift required to get the minimum sum of squared differences \cite{introssd} for that pixel or section of the image. 
 
 Stereo pairs are images typically taken with only a slight difference in the distance of the cameras. Preferably the camera settings should be the same and the hardware should be the same as well to ensure that the images are similar. 
+
+Another reason that this image was selected for testing was due to their not being many pixels present to test.
+
+%TODO:Add extra images taken on phones in the labs. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -110,12 +113,33 @@ Stereo pairs are images typically taken with only a slight difference in the dis
 
 The team used a brute force method to gain their results using this method meant that the run time was extremely high due the fact that a disparity value had to be calculated for every pixel of the image. 
 
+This was a problem when the team was testing their algorithm. Also since we were learning at the same time it didn't help as a simple error could take in excess of 10 minutes to produce a result even on a 100 x 100 image. 
+
+%TODO:Explain what other algorithms could be used instead. 
+
 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
 \section{Description of Images Used}
 \vspace{-1ex}
+
+The team used the stereo images provided on the VLE to create their program. The pair that was mainly used was the bookcase image shown in figure \ref{fig:testR}. It was selected as there are clear levels of depth between the different books and the team thought that they would produce a noteworthy result. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=40mm]{Figures/testR}
+    \caption{Bookcase}~\label{fig:testR}
+\end{figure} 
+
+The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to %TODO:Complete
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=40mm]{Figures/scene}
+    \caption{Scene}~\label{fig:scene}
+\end{figure} 
+
 
 %Example images + stereo pair that was taken in the labs. 
 
@@ -133,13 +157,25 @@ The team used a brute force method to gain their results using this method meant
 
 The result shown in figure \ref{fig:FirstResult} is the result of running the test on the bookcases image taking the top 20 x 20 pixels of the image.  
 
-The team found that the getSSD function wasn't correctly working since it was either producing 0 or 255 as the final output this was confirmed when the image in figure \ref{fig:SecondResult} was produced. 
+The team found that the SSD values were not correctly working since it was either producing a value of 0 or 255 as the final output this was confirmed when the image in figure \ref{fig:SecondResult} was produced. 
+
+We believe that the black band shown in figure \ref{fig:SecondResult} is due to the padding that was added to image. 
 
  \begin{figure}[H]
 \centering
   \includegraphics[height=50mm]{Figures/Second_Result}
-    \caption{Second Result}~\label{fig:FirstResult}
+    \caption{Second Result}~\label{fig:SecondResult}
 \end{figure} 
+
+We discovered that the displacement values had to be converted into an 8 bit unsigned integer to be correctly displayed as a greyscale image. This then resulted in figure \ref{fig:Third_Result} being produced. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[height=50mm]{Figures/Third_Result}
+    \caption{Third Result}~\label{fig:Third_Result}
+\end{figure} 
+
+After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over an hour to run on a modern laptop.  
 
 %We found that the images that we had been using when doing the resize down to 20 
 
@@ -149,13 +185,14 @@ The team found that the getSSD function wasn't correctly working since it was ei
 \vspace{-1ex}
 
 The team had never worked with matlab before and were pleased with what they were able to achieve within this short space of time.
+ 
 
 The full source code for the teams work can be found in a git hub repository \cite{githublink}.
 
 \section{Future Work} 
 \vspace{-1ex}
 
-If the team had more time available we would like to.  
+If the team had more time available we would like to have been able to perform research on 3D imaging techniques and work on a way of creating an optimised algorithm that minimises computation. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%

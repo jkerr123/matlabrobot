@@ -1,5 +1,8 @@
-imageL = strcat(pwd,'/testL2.jpg');
-imageR = strcat(pwd,'/testR2.jpg');
+% imageL = strcat(pwd,'/testL.jpg');
+% imageR = strcat(pwd,'/testR.jpg');
+
+ imageL = strcat(pwd,'/scene_l.bmp');
+ imageR = strcat(pwd,'/scene_r.bmp');
 
 imageL = convertImage(imageL);
 imageR = convertImage(imageR);
