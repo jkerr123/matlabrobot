@@ -1,8 +1,11 @@
 % imageL = strcat(pwd,'/testL.jpg');
 % imageR = strcat(pwd,'/testR.jpg');
 
- imageL = strcat(pwd,'/scene_l.bmp');
- imageR = strcat(pwd,'/scene_r.bmp');
+ %imageL = strcat(pwd,'/scene_l.bmp');
+ %imageR = strcat(pwd,'/scene_r.bmp');
+ 
+  imageL = strcat(pwd,'/coke_left.png');
+ imageR = strcat(pwd,'/coke_right.png');
 
 imageL = convertImage(imageL);
 imageR = convertImage(imageR);

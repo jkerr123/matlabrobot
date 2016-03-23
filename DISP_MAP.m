@@ -3,11 +3,11 @@ function dispMap = DISP_MAP( imageL, imageR )
 %   Detailed explanation goes here
 dispMap = [];
 
-for xL=2:250
-    for yL=2:250
+for xL=2:80
+    for yL=2:80
     supportWindow = getSupportWindow(imageL, xL, yL);    
-        for xR=3:250
-            for yR=3:250
+        for xR=6:80
+            for yR=6:80
                 
                 if imageR(xR, yR) ~= -1
                     searchWindow = getSearchWindow(imageR, xR,yR);

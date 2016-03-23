@@ -144,7 +144,7 @@ We used our own image that we took with an iPhone 6S as well with an iPad box an
 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=40mm]{Figures/Coke_Image}
+  \includegraphics[height=30mm]{Figures/Coke_Image}
     \caption{Our Image}~\label{fig:CokeScene}
 \end{figure} 
 
@@ -197,7 +197,15 @@ Since the team couldn't find out much information from the corner of the books w
 
 The result seemed pixelated the team believed that this was because of the search window size since we knew that decreasing the size of the window would increase the resolution and provide more clarity in the disparity map how ever the trade off is that noise isn't handled as much. 
 
-The window size was reduced from 15 to 9 and the image on the right of figure \ref{fig:Search_Window} was produced. This seemed to be hopeful. 
+The window size was reduced from 15 to 9 and the image on the right of figure \ref{fig:Search_Window} was produced. This seemed to be hopeful.
+
+\begin{figure}[H]
+\centering
+  \includegraphics[height=50mm]{Figures/Coke_Result}
+    \caption{Coke Result}~\label{fig:Coke_Result}
+\end{figure} 
+
+After the result in figure \ref{fig:Coke_Result} was produced on our full sized image (figure \ref{fig:CokeScene}). The team realised that the disparity map wasn't functioning correctly. Assistance was then provided by Andrew Mcneil and it was pointed out that we were using the SSD values to create the map and not the disparity values which was an oversight.   
 
 
 \section{Conclusion}
@@ -217,7 +225,7 @@ If the team had more time available we would like to have been able to perform r
 %%%%%%%%%%%
 
 \section*{Acknowledgements}
-The team would like to thank Emanuele Trucco for his support throughout this module. 
+The team would like to thank Andrew McNeil for his support throughout this module.
 
 %%%%%%%%%%%
 %%%%%%%%%%%
