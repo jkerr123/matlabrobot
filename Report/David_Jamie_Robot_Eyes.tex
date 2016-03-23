@@ -104,7 +104,6 @@ Stereo pairs are images typically taken with only a slight difference in the dis
 
 Another reason that this image was selected for testing was due to their not being many pixels present to test.
 
-%TODO:Add extra images taken on phones in the labs. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -115,10 +114,8 @@ The team used a brute force method to gain their results using this method meant
 
 This was a problem when the team was testing their algorithm. Also since we were learning at the same time it didn't help as a simple error could take in excess of 10 minutes to produce a result even on a 100 x 100 image. 
 
-%TODO:Explain what other algorithms could be used instead. 
-The team discovered an algorithm called ENCC \cite{ENCC} which produces an estimate of disparity with sub pixel accuracy. 
-
-
+%TODO:Add another algorithm 
+The team discovered an algorithm called ENCC \cite{ENCC} which produces an estimate of disparity with sub pixel accuracy. This could have been used in place of the brute force method to create a disparity map but may not have had the same accuracy. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -206,7 +203,15 @@ The window size was reduced from 15 to 9 and the image on the right of figure \r
     \caption{Coke Result}~\label{fig:Coke_Result}
 \end{figure} 
 
-After the result in figure \ref{fig:Coke_Result} was produced on our full sized image (figure \ref{fig:CokeScene}). The team realised that the disparity map wasn't functioning correctly. Assistance was then provided by Andrew Mcneil and it was pointed out that we were using the SSD values to create the map and not the disparity values which was an oversight.   
+After the result in figure \ref{fig:Coke_Result} was produced on our full sized image (figure \ref{fig:CokeScene}). The team realised that the disparity map wasn't functioning correctly. Assistance was then provided by Andrew Mcneil and it was pointed out that we were using the SSD values to create the map and not the disparity values which was an oversight.  
+
+ \begin{figure}[H]
+\centering
+  \includegraphics[height=30mm]{Figures/Disp_Vectors_1}
+    \caption{Disparity vectors result}~\label{fig:Disp_Vectors_1}
+\end{figure} 
+
+After making alterations to our program to use the disparity values we managed to produce figure \ref{fig:Disp_Vectors_1}. This was produced by mapping the disparity values to a relevant greyscale value for each pixel. 
 
 
 \section{Conclusion}
