@@ -6,54 +6,54 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ../RobotEyes.bib
 Warning--entry type for "sceneusage2" isn't style-file defined
---line 11 of file ../RobotEyes.bib
-Warning--entry type for "sceneusage" isn't style-file defined
 --line 21 of file ../RobotEyes.bib
+Warning--entry type for "sceneusage" isn't style-file defined
+--line 32 of file ../RobotEyes.bib
 Warning--entry type for "githublink" isn't style-file defined
---line 39 of file ../RobotEyes.bib
+--line 51 of file ../RobotEyes.bib
 Warning--entry type for "disparitymap" isn't style-file defined
---line 50 of file ../RobotEyes.bib
+--line 62 of file ../RobotEyes.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty address in introssd
-You've used 5 entries,
+You've used 6 entries,
             5283 wiz_defined-function locations,
-            1241 strings with 14783 characters,
-and the built_in function-call counts, 5230 in all, are:
-= -- 646
-> -- 75
+            1248 strings with 15101 characters,
+and the built_in function-call counts, 6886 in all, are:
+= -- 870
+> -- 103
 < -- 0
-+ -- 15
-- -- 227
-* -- 330
-:= -- 553
-add.period$ -- 26
-call.type$ -- 5
-change.case$ -- 25
-chr.to.int$ -- 5
-cite$ -- 6
-duplicate$ -- 247
-empty$ -- 189
-format.name$ -- 30
-if$ -- 959
++ -- 26
+- -- 317
+* -- 447
+:= -- 721
+add.period$ -- 32
+call.type$ -- 6
+change.case$ -- 32
+chr.to.int$ -- 6
+cite$ -- 7
+duplicate$ -- 300
+empty$ -- 227
+format.name$ -- 45
+if$ -- 1252
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 2
-newline$ -- 77
-num.names$ -- 30
-pop$ -- 109
+newline$ -- 86
+num.names$ -- 36
+pop$ -- 131
 preamble$ -- 1
-purify$ -- 45
+purify$ -- 55
 quote$ -- 0
-skip$ -- 62
+skip$ -- 76
 stack$ -- 0
-substring$ -- 975
-swap$ -- 10
-text.length$ -- 398
+substring$ -- 1327
+swap$ -- 12
+text.length$ -- 555
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 41
+type$ -- 50
 warning$ -- 1
-while$ -- 34
+while$ -- 41
 width$ -- 0
-write$ -- 106
+write$ -- 121
 (There were 5 warnings)

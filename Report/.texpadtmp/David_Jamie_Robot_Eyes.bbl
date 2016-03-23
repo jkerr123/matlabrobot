@@ -57,6 +57,17 @@
 \url{http://www.shawnlankton.com/2007/12/3d-vision-with-stereo-disparity/}}
 
 
+\bibitem{ENCC}
+{Emmanouil~Z. Psarakis} {and} {Georgios~D. Evangelidis}. 2005.
+\newblock {\em An Enhanced Correlation-Based Method for Stereo Correspondence
+  with Sub-Pixel Accuracy}.
+\newblock {T}echnical {R}eport. Department of Computer Engineering and
+  Informatics University of Patras, 26500 Patras, Greece.
+\newblock
+\showURL{%
+\url{http://xanthippi.ceid.upatras.gr/people/evangelidis/george_files/ICCV_2005.pdf}}
+
+
 \bibitem{disparitymap}
 {Jay Rambhia}. 2013.
 \newblock Disparity Map.

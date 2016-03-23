@@ -10,6 +10,9 @@
 imageL = convertImage(imageL);
 imageR = convertImage(imageR);
 
+
+%[imageL,imageR] = rectifyStereoImages(imageL,imageR,stereoParams)
+
 %imageL = im2int16(imageL);
 %imageR = im2int16(imageR);
 
