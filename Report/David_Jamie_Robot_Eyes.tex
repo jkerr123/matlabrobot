@@ -88,7 +88,7 @@ The team was given the task of creating a disparity map from a pair of stereo im
 \section{Introduction}
 \vspace{-1ex}
 
-The assignment required the team to acquire new experiences in computer vison by using matlab. We were encouraged to experiment with variables and publish our results of the findings. This report details the experiments that the team performed and the notable results that were acquired from them. 
+The assignment required the team to acquire new knowledge of computer vision by producing their own disparity map from scratch using Matlab. We were encouraged to experiment with variables and publish our results of the findings. This report details the experiments that the team performed and the notable results that were acquired from them. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -132,7 +132,7 @@ The team used the stereo images provided on the VLE to create their program. The
     \caption{Bookcase}~\label{fig:testR}
 \end{figure} 
 
-The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to %TODO:Complete
+The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to there being an obvious deviation of layers in the image. The image is also has a small resolution too which means that it won't take long to produce a result.  
 
 \begin{figure}[H]
 \centering
@@ -140,22 +140,31 @@ The other pair that the team used was the "Scene" pair which we had seen used a 
     \caption{Scene}~\label{fig:scene}
 \end{figure} 
 
+We used our own image that we took with an iPhone 6S as well with an iPad box and a bottle of coke in front of it to indicate clear layers of depth in the stereo pair. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[height=40mm]{Figures/Coke_Image}
+    \caption{Our Image}~\label{fig:CokeScene}
+\end{figure} 
+
+The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using photoshop for testing purposes as it would take significantly less time to compute. On the left of figure \ref{fig:CokeScene} is the left and the right image overlaid. When the image was taken the team used a table to place the camera on to ensure that the position of the camera remained constant from taking the left and right image. 
 
 %Example images + stereo pair that was taken in the labs. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
 
-\section{Results and Comments}
+\section{Results}
 \vspace{-1ex}
 
- \begin{figure}[H]
-\centering
-  \includegraphics[height=50mm]{Figures/First_Result}
-    \caption{First Result}~\label{fig:FirstResult}
-\end{figure} 
+The result shown in figure \ref{fig:FirstResult} is the result of running the test on the bookcases image taking the top 20 x 20 pixels of the image. 
 
-The result shown in figure \ref{fig:FirstResult} is the result of running the test on the bookcases image taking the top 20 x 20 pixels of the image.  
+\begin{figure}[H]
+\centering
+  \includegraphics[height=30mm]{Figures/First_Result}
+    \caption{First Result}~\label{fig:FirstResult}
+\end{figure}  
 
 The team found that the SSD values were not correctly working since it was either producing a value of 0 or 255 as the final output this was confirmed when the image in figure \ref{fig:SecondResult} was produced. 
 
@@ -163,7 +172,7 @@ We believe that the black band shown in figure \ref{fig:SecondResult} is due to 
 
  \begin{figure}[H]
 \centering
-  \includegraphics[height=50mm]{Figures/Second_Result}
+  \includegraphics[height=30mm]{Figures/Second_Result}
     \caption{Second Result}~\label{fig:SecondResult}
 \end{figure} 
 
@@ -171,14 +180,24 @@ We discovered that the displacement values had to be converted into an 8 bit uns
 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=50mm]{Figures/Third_Result}
+  \includegraphics[height=30mm]{Figures/Third_Result}
     \caption{Third Result}~\label{fig:Third_Result}
 \end{figure} 
 
-After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over an hour to run on a modern laptop.  
+After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over two hours to run on a modern laptop and the end result wasn't what the team were hoping to produce. 
 
+  
+\begin{figure}[H]
+\centering
+  \includegraphics[height=50mm]{Figures/Search_Window_Comparison}
+    \caption{Search Window}~\label{fig:Search_Window}
+\end{figure} 
 %We found that the images that we had been using when doing the resize down to 20 
+Since the team couldn't find out much information from the corner of the books we decided to try using the scene image (figure \ref{fig:scene}) and focus on the section of the image where the lamp is in front of the head. The result that was produced from this was the image on the left of figure \ref{fig:Search_Window}. The team were pleased with this result as there was a larger variation in values. 
 
+The result seemed pixelated the team believed that this was because of the search window size since we knew that decreasing the size of the window would increase the resolution and provide more clarity in the disparity map how ever the trade off is that noise isn't handled as much. 
+
+The window size was reduced from 15 to 9 and the image on the right of figure \ref{fig:Search_Window} was produced. This seemed to be hopeful. 
 
 
 \section{Conclusion}

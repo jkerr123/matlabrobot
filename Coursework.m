@@ -15,7 +15,7 @@ imageR = convertImage(imageR);
 %imageR = int64(imageR)
 
 imageL = padarray(imageL,[1,1], -1);
-imageR = padarray(imageR,[7,7], -1);
+imageR = padarray(imageR,[2,2], -1);
 
 dispMap = DISP_MAP(imageL, imageR)  
 

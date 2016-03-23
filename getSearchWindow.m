@@ -6,6 +6,6 @@ function searchWindow = getSupportWindow( image, x,y)
 
 
 
-searchWindow = image(y-7:y+7, x-7:x+7);
+searchWindow = image(y-2:y+2, x-2:x+2);
 
 end

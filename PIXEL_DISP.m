@@ -12,8 +12,8 @@ smallestSSD= [];
  
  % 3 because there is no padding at the moment
  % padding needs to be added
-for y=2:15-3
-   for x=2:15-3
+for y=2:5-3
+   for x=2:5-3
      
     % gets the 3x3 grid from the search window to compare it to the left
     % image search window
