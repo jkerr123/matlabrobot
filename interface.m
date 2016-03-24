@@ -109,6 +109,7 @@ else
     else    
     dispMap = DISP_MAP(leftImage, rightImage, supportSize, searchSize,mapWidth,mapHeight,method);
     figure, imtool(dispMap, []);
+    end
 end
 
 
