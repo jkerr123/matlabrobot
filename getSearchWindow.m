@@ -1,11 +1,12 @@
-function searchWindow = getSupportWindow( image, x,y)
+function searchWindow = getSearchWindow( image, x,y, size )
 %GETSUPPORTWINDOW Summary of this function goes here
 %   Detailed explanation goes here
-%Hard coded values to 7. 
+
+size = (size-1)/2;
 
 
+searchWindow = image(y-size:y+size, x-size:x+size);
 
 
-searchWindow = image(y-2:y+2, x-2:x+2);
 
 end
