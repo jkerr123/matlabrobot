@@ -1,34 +1,30 @@
-function [DISP, smallestSSD, closestMatch] = PIXEL_DISP(searchWindow, supportWindow, startX, startY)
+function [DISP, smallestCorVal, closestMatch] = PIXEL_DISP(searchWindow, supportWindow, startX, startY, supportSize, searchCoordMap, method)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
 %Searching for the closest match. 
-
+closestMatch = [];
+smallestCorVal= [];
  xcord=[];
  ycord=[];
-
-closestMatch = [];
-smallestSSD= [];
  
- % 3 because there is no padding at the moment
- % padding needs to be added
-for y=2:5-3
-   for x=2:5-3
+ startingPoint = (supportSize + 1) / 2;
+
+for y=startingPoint:size(searchWindow,1)-1
+   for x=startingPoint:size(searchWindow,2)-1
      
-    % gets the 3x3 grid from the search window to compare it to the left
-    % image search window
-      RightWindow  = getSupportWindow(searchWindow,x,y); 
-      SSD = SUPPORT_CMP(supportWindow,RightWindow);
+    RightWindow  = getSupportWindow(searchWindow,x,y,3);  
+    corVal = SUPPORT_CMP(supportWindow,RightWindow, method);
     
     if isempty(closestMatch)     
         closestMatch = RightWindow;
     end
     
-    if isempty(smallestSSD) || SSD < smallestSSD
-        smallestSSD = SSD;
+    if isempty(smallestCorVal) || corVal < smallestCorVal
+        smallestCorVal = corVal;
         closestMatch = RightWindow;
         
- 
+  
         xcord = x;
         ycord = y;
     end
@@ -39,13 +35,12 @@ for y=2:5-3
    end
 end
 
- xcord = startX + (xcord - 7);
- ycord = startY + (ycord -7);
  
- x = startX - xcord;
- y = startY - ycord;
+ 
+ x = searchCoordMap - xcord ;
+ y = searchCoordMap - ycord ;
 
 
-DISP =[x,y];
+DISP =[y,x];
 end
 

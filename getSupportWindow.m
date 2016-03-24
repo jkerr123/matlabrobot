@@ -1,11 +1,12 @@
-function supportWindow = getSupportWindow( image, x,y )
+function supportWindow = getSupportWindow( image, x,y, size )
 %GETSUPPORTWINDOW Summary of this function goes here
 %   Detailed explanation goes here
 
 
+size = (size-1)/2;
+supportWindow = image(y-size:y+size, x-size:x+size);
 
-%Hard coded to 1. 
-supportWindow = image(y-1:y+1, x-1:x+1);
+
 
 end
 

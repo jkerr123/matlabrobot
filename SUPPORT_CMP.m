@@ -1,7 +1,10 @@
-function SSD = SUPPORT_CMP(searchWindow, supportWindow)
+function corVal = SUPPORT_CMP(searchWindow, supportWindow, method)
  
-    SSD = getSSD(supportWindow,searchWindow);
-    
+if strcmp(method, 'SSD')    
+    corVal = (sum(searchWindow(:)) - (sum(supportWindow(:)))).^2;
+elseif strcmp(method, 'SAD')
+    corVal = (sum(searchWindow(:)) - (sum(supportWindow(:))));
+end    
     
 end
 

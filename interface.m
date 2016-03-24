@@ -106,9 +106,9 @@ else
     
     if searchSize < supportSize
     h = msgbox('Search window must be larger than support window!');
-    else       
-    %dispMap = DISP_MAP(leftImage, rightImage, supportSize, searchSize,mapWidth,mapHeight,method);
-    %figure, imshow(dispMap);
+    else    
+    dispMap = DISP_MAP(leftImage, rightImage, supportSize, searchSize,mapWidth,mapHeight,method);
+    figure, imtool(dispMap, []);
     end
 end
 

@@ -1,25 +1,32 @@
-function dispMap = DISP_MAP( imageL, imageR )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
-dispMap = [];
+function dispMap = DISP_MAP(imageL, imageR, supportWindowSize, searchWindowSize, width, height, method)
 
-for xL=2:80
-    for yL=2:80
-    supportWindow = getSupportWindow(imageL, xL, yL);    
-        for xR=6:80
-            for yR=6:80
-                
-                if imageR(xR, yR) ~= -1
-                    searchWindow = getSearchWindow(imageR, xR,yR);
-                    [pixelDisp, SSD, window] = PIXEL_DISP(searchWindow, supportWindow, xL, yL);
-                   
-                    dispMap(xR, yR) = SSD;
-                    yR;
-                end
-            end
-        end 
+
+
+imageLpad = (supportWindowSize - 1) / 2;
+imageRpad=(searchWindowSize - 1) / 2;
+
+imageL = padarray(imageL,[imageLpad,imageLpad]);
+imageR = padarray(imageR,[imageRpad,imageRpad]);
+
+bar = waitbar(0, 'Generating Disparity Map...');
+
+for xL=1+imageLpad:width+imageLpad-1
+    for yL=1+imageLpad:height+imageLpad-1
+        
+        supportWindow = getSupportWindow(imageL, xL, yL, supportWindowSize);
+        searchWindow = getSearchWindow(imageR, xL + imageRpad,yL + imageRpad, searchWindowSize);       
+ 
+        [pixelDisp, corVal, window] = PIXEL_DISP(searchWindow, supportWindow, xL, yL, supportWindowSize, imageRpad, method); 
+        dispMap(yL, xL) = pixelDisp(1,1);                
+                       
+           
+           waitbar(xL / (width+imageLpad)) 
     end
-    xL;
+
+end
+
+delete(bar)
+%imtool(dispMap,[])
 end
 
 
