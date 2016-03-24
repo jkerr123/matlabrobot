@@ -116,7 +116,9 @@ This was a problem when the team was testing their algorithm. Also since we were
 
 
 
-%TODO:Add another algorithm 
+%TODO:Add another potential algorithms.
+
+
 The team discovered an algorithm called ENCC \cite{ENCC} which produces an estimate of disparity with sub pixel accuracy. This could have been used in place of the brute force method to create a disparity map but may not have had the same accuracy. 
 
 %%%%%%%%%%%
@@ -148,7 +150,7 @@ We used our own image that we took with an iPhone 6S as well with an iPad box an
     \caption{Our Image}~\label{fig:CokeScene}
 \end{figure} 
 
-The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using photoshop for testing purposes as it would take significantly less time to compute. On the left of figure \ref{fig:CokeScene} is the left and the right image overlaid. When the image was taken the team used a table to place the camera on to ensure that the position of the camera remained constant from taking the left and right image. 
+The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using photoshop for testing purposes as it would take significantly less time to compute. On the left of figure \ref{fig:CokeScene} is the left and the right images overlaid. When the images were taken the team used a table to place the camera on to ensure that the position of the camera remained constant from taking the left and right image. We were aware that rotation of the camera wasn't fixed which could result in a sub optimal stereo pair.  
 
 %Example images + stereo pair that was taken in the labs. 
 
@@ -157,39 +159,25 @@ The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using ph
 
 \section{Results}
 \vspace{-1ex}
+The team created a program that worked out the disparity and outputted the SSD and disparity for one specific pixel. After this was done we then started trying to create a disparity map using the SSD values. 
 
-The result shown in figure \ref{fig:FirstResult} is the result of running the test on the bookcases image taking the top 20 x 20 pixels of the image. 
+The team found that the SSD values were not correctly working since it was either producing a value of 0 or 255 as the final output this was confirmed when the disparity maps pixels were either black or white. 
 
-\begin{figure}[H]
+Then we found that the displacement values had to be converted into an 8 bit unsigned integer to be correctly displayed as a greyscale image. This then resulted in figure \ref{fig:Third_Result} being produced which was a step in the right direction. 
+
+It was noted that the black band shown in figure \ref{fig:Third_Result} is due to the padding that was added to image.  
+
+\begin{figure}
 \centering
-  \includegraphics[height=30mm]{Figures/First_Result}
-    \caption{First Result}~\label{fig:FirstResult}
-\end{figure}  
-
-The team found that the SSD values were not correctly working since it was either producing a value of 0 or 255 as the final output this was confirmed when the image in figure \ref{fig:SecondResult} was produced. 
-
-We believe that the black band shown in figure \ref{fig:SecondResult} is due to the padding that was added to image. 
-
- \begin{figure}[H]
-\centering
-  \includegraphics[height=30mm]{Figures/Second_Result}
-    \caption{Second Result}~\label{fig:SecondResult}
+  \includegraphics[height=20mm]{Figures/Third_Result}
+    \caption{Greyscale Output}~\label{fig:Third_Result}
 \end{figure} 
 
-We discovered that the displacement values had to be converted into an 8 bit unsigned integer to be correctly displayed as a greyscale image. This then resulted in figure \ref{fig:Third_Result} being produced. 
-
+After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over two hours to run on a modern laptop and the end result wasn't what the team were hoping to produce. This wasted a lot of time. 
+ 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=30mm]{Figures/Third_Result}
-    \caption{Third Result}~\label{fig:Third_Result}
-\end{figure} 
-
-After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over two hours to run on a modern laptop and the end result wasn't what the team were hoping to produce. 
-
-  
-\begin{figure}[H]
-\centering
-  \includegraphics[height=50mm]{Figures/Search_Window_Comparison}
+  \includegraphics[height=30mm]{Figures/Search_Window_Comparison}
     \caption{Search Window}~\label{fig:Search_Window}
 \end{figure} 
 %We found that the images that we had been using when doing the resize down to 20 
@@ -201,7 +189,7 @@ The window size was reduced from 15 to 9 and the image on the right of figure \r
 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=50mm]{Figures/Coke_Result}
+  \includegraphics[height=20mm]{Figures/Coke_Result}
     \caption{Coke Result}~\label{fig:Coke_Result}
 \end{figure} 
 
@@ -215,19 +203,42 @@ After the result in figure \ref{fig:Coke_Result} was produced on our full sized 
 
 After making alterations to our program to use the disparity values we managed to produce figure \ref{fig:Disp_Vectors_1}. This was produced by mapping the disparity values to a relevant greyscale value for each pixel. 
 
+We knew that this still wasn't what we were expecting and since the structure of our program was increasingly complex it became difficult to debug. At this point the team decided to go back to the drawing board by getting rid of two weeks worth of work to when we simply had the disparity vector of one pixel being computed since the code was a lot more manageable at this point. 
+
+We then modified the code to calculate every pixel similar to what it was doing before hand and started to get some noteworthy results instead of hardcoding values we set up variables for search window size, support window size, map height, map width and the type of algorithm.
+
+A GUI was created during the run time of generating the maps to help run future tests this was built to increase our productivity during run time and also assist with testing. 
+
+One problem we realised that we had created was before we were looping through the whole right image and not just the search window which was the reason why our program was taking so long. 
+
+The option for the SAD matching algorithm was added in to our program as well so we could run tests to compare them. 
+
+ \begin{figure}[H]
+\centering
+  \includegraphics[height=35mm]{Figures/SSDvsSAD}
+    \caption{SSD vs SAD}~\label{fig:SSDvsSAD}
+\end{figure} 
+
+Figure \ref{fig:SSDvsSAD} shows the difference between using SSD and SAD on the pentagon image. The disparity maps colours were mapped using the pink colormap function as well to produce a clearer visualisation. In this situation we believe that SAD produced a more accurate representation of depth in the image. 
+
+
+ 
 
 \section{Conclusion}
 \vspace{-1ex}
 
-The team had never worked with Matlab before and were pleased with what they were able to achieve within this short space of time.
+From the results gained, Even though they may not be exactly spot on the team felt they were on the right lines.
+
+The team had never worked with Matlab before and were pleased with what they were able to achieve within this short space of time. 
  
+The GUI that was produced helped a lot with testing and the team were pleased to have created it with no prior experience.   
 
 The full source code for the teams work can be found in a git hub repository \cite{githublink}.
 
 \section{Future Work} 
 \vspace{-1ex}
 
-If the team had more time available we would like to have been able to perform research on 3D imaging techniques and work on a way of creating an optimised algorithm that minimises computation. 
+If the team had more time available we would like to have been able to perform research on 3D imaging techniques and work on ways of optimising the matching algorithm to minimise computation. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
