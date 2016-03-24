@@ -9,11 +9,13 @@ smallestCorVal= [];
  ycord=[];
  
  startingPoint = (supportSize + 1) / 2;
+ endpointX = size(searchWindow,2)-1;
+ endpointY = size(searchWindow,1)-1;
 
-for y=startingPoint:size(searchWindow,1)-1
-   for x=startingPoint:size(searchWindow,2)-1
+for y=startingPoint:endpointY
+   for x=startingPoint:endpointX
      
-    RightWindow  = getSupportWindow(searchWindow,x,y,3);  
+    RightWindow  = getSupportWindow(searchWindow, x, y,3);  
     corVal = SUPPORT_CMP(supportWindow,RightWindow, method);
     
     if isempty(closestMatch)     
@@ -22,16 +24,17 @@ for y=startingPoint:size(searchWindow,1)-1
     
     if isempty(smallestCorVal) || corVal < smallestCorVal
         smallestCorVal = corVal;
-        closestMatch = RightWindow;
-        
-  
+        closestMatch = RightWindow;        
+
         xcord = x;
         ycord = y;
     end
-%     'Print'
-%     closestMatch
-%     smallestSSD
-    
+    if corVal == 0
+        break;
+    end
+   end
+   if corVal == 0
+       break;
    end
 end
 
@@ -39,6 +42,7 @@ end
  
  x = searchCoordMap - xcord ;
  y = searchCoordMap - ycord ;
+
 
 
 DISP =[y,x];

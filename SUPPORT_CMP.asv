@@ -1,8 +1,0 @@
-function corVal = SUPPORT_CMP(searchWindow, supportWindow, method)
- 
-if strcmp(method, 'SSD;)    
-SSD = getSSD(supportWindow,searchWindow);
-    
-    
-end
-
