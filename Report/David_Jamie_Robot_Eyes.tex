@@ -119,6 +119,15 @@ The team discovered an algorithm called ENCC \cite{ENCC} which produces an estim
 
 %%%%%%%%%%%
 %%%%%%%%%%%
+\section{Assumptions Made}
+\vspace{-1ex}
+
+The team implemented a rectification option that assumes that the images entered have already been rectified. The program will work with non rectified images as well if the tick box isn't checked. 
+
+
+
+%%%%%%%%%%%
+%%%%%%%%%%%
 \section{Description of Images Used}
 \vspace{-1ex}
 
@@ -164,9 +173,9 @@ The team found that the SSD values were not correctly working since it was eithe
 
 It was noted that the black band shown in figure \ref{fig:Third_Result} is due to the padding that was added to image.  
 
-\begin{figure}
+\begin{figure}[H]
 \centering
-  \includegraphics[height=20mm]{Figures/Third_Result}
+  \includegraphics[height=30mm]{Figures/Third_Result}
     \caption{Greyscale Output}~\label{fig:Third_Result}
 \end{figure} 
 
@@ -180,13 +189,13 @@ After figure \ref{fig:Third_Result} was produced the team then ran a test using 
 %We found that the images that we had been using when doing the resize down to 20 
 Since the team couldn't find out much information from the corner of the books we decided to try using the scene image (figure \ref{fig:scene}) and focus on the section of the image where the lamp is in front of the head. The result that was produced from this was the image on the left of figure \ref{fig:Search_Window}. The team were pleased with this result as there was a larger variation in values. 
 
-The result seemed pixelated the team believed that this was because of the search window size since we knew that decreasing the size of the window would increase the resolution and provide more clarity in the disparity map how ever the trade off is that noise isn't handled as much. 
+The result seemed pixelated the team believed that this was because of the search window size since we knew that decreasing the size of the window would increase the resolution and provide more clarity in the disparity map how ever the trade off is that there will be more noise present in the map. 
 
 The window size was reduced from 15 to 9 and the image on the right of figure \ref{fig:Search_Window} was produced. This seemed to be hopeful.
 
 \begin{figure}[H]
 \centering
-  \includegraphics[height=20mm]{Figures/Coke_Result}
+  \includegraphics[height=30mm]{Figures/Coke_Result}
     \caption{Coke Result}~\label{fig:Coke_Result}
 \end{figure} 
 
@@ -206,9 +215,9 @@ We then modified the code to calculate every pixel similar to what it was doing 
 
 A GUI was created during the run time of generating the maps to help run future tests this was built to increase our productivity during run time and also assist with testing. 
 
-One problem we realised that we had created was before we were looping through the whole right image and not just the search window which was the reason why our program was taking so long. The padding was also removed as it was causing major problems when creating the maps.  
+One issue that we had created previously was that we were looping through the whole right image and not just the search window which was the reason why our program was taking so long. The padding was also removed as it was causing major problems when creating the maps. A combination of these two actions majorly reduced the running time of the program.    
 
-The option for the SAD matching algorithm was added in to our program as well so we could run tests to compare them. 
+The SAD matching algorithm was added into our program as well so we could run tests to compare SSD to SAD. 
 
  \begin{figure}[H]
 \centering
@@ -218,8 +227,13 @@ The option for the SAD matching algorithm was added in to our program as well so
 
 Figure \ref{fig:SSDvsSAD} shows the difference between using SSD and SAD on the pentagon image. The disparity maps colours were mapped using the pink colormap function as well to produce a clearer visualisation. In this situation we believe that SAD produced a more accurate representation of depth in the image. 
 
+The team then ran the SAD algorithm on the Coke bottle image and produced our final output of figure \ref{fig:Coke_Bottle}. Which clearly shows the bottle in front of the iPad box. 
 
- 
+ \begin{figure}[H]
+\centering
+  \includegraphics[height=30mm]{Figures/Coke_Bottle}
+    \caption{Coke Bottle SAD}~\label{fig:Coke_Bottle}
+\end{figure} 
 
 \section{Conclusion}
 \vspace{-1ex}
@@ -235,7 +249,7 @@ The full source code for the teams work can be found in a git hub repository \ci
 \section{Future Work} 
 \vspace{-1ex}
 
-If the team had more time available we would like to have been able to perform research on 3D imaging techniques and work on ways of optimising the matching algorithm to minimise computation. 
+If the team had more time available we would like to have been able to perform research on 3D reconstruction techniques and also work on ways of optimising the matching algorithm to minimise computation. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%

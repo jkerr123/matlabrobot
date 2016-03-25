@@ -160,7 +160,7 @@ if get(hObject,'Value')
     set(handles.mapWidth,'Visible','On')
     set(handles.mapWidthText,'Visible','On')
     
-    [height,width] = size(image)
+    [height,width] = size(image);
     
     %Set sliders to the correct height and width values of the image loaded
     %in. 

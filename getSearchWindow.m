@@ -1,6 +1,6 @@
 function searchWindow = getSearchWindow( image, x,y, size, supportSize, rectified )
 %GETSUPPORTWINDOW Summary of this function goes here
-%   Detailed explanation goes here
+
 
 size = (size-1)/2;
 supportSize = (supportSize - 1)/2;

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.13)  25 MAR 2016 11:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.2.13)  25 MAR 2016 12:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -692,61 +692,69 @@ File: utxsyc.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
- <Figures/testR.jpg, id=40, 240.9pt x 180.675pt>
+ <Figures/testR.jpg, id=44, 240.9pt x 180.675pt>
 File: Figures/testR.jpg Graphic file (type jpg)
  <use Figures/testR.jpg>
-Package pdftex.def Info: Figures/testR.jpg used on input line 129.
+Package pdftex.def Info: Figures/testR.jpg used on input line 138.
 (pdftex.def)             Requested size: 113.81102pt x 85.35835pt.
 
-Underfull \vbox (badness 1728) has occurred while \output is active []
+Underfull \vbox (badness 7064) has occurred while \output is active []
 
  [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 Non-PDF special ignored!
 
- <./Figures/testR.jpg>] <Figures/scene.png, id=56, 385.44pt x 289.08pt>
+] <Figures/scene.png, id=60, 385.44pt x 289.08pt>
 File: Figures/scene.png Graphic file (type png)
  <use Figures/scene.png>
-Package pdftex.def Info: Figures/scene.png used on input line 137.
+Package pdftex.def Info: Figures/scene.png used on input line 146.
 (pdftex.def)             Requested size: 113.81102pt x 85.35725pt.
- <Figures/Coke_Image.png, id=57, 1024.32687pt x 641.39626pt>
+ <Figures/Coke_Image.png, id=61, 1024.32687pt x 641.39626pt>
 File: Figures/Coke_Image.png Graphic file (type png)
  <use Figures/Coke_Image.png>
-Package pdftex.def Info: Figures/Coke_Image.png used on input line 145.
+Package pdftex.def Info: Figures/Coke_Image.png used on input line 154.
 (pdftex.def)             Requested size: 136.30878pt x 85.35826pt.
- <Figures/Third_Result.png, id=62, 396.48125pt x 396.48125pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ <Figures/Third_Result.png, id=66, 396.48125pt x 396.48125pt>
 File: Figures/Third_Result.png Graphic file (type png)
  <use Figures/Third_Result.png>
-Package pdftex.def Info: Figures/Third_Result.png used on input line 169.
-(pdftex.def)             Requested size: 56.9045pt x 56.9055pt.
- <Figures/Search_Window_Comparison.png, id=64, 682.55pt x 620.3175pt>
+Package pdftex.def Info: Figures/Third_Result.png used on input line 178.
+(pdftex.def)             Requested size: 85.35675pt x 85.35826pt.
+
+Underfull \vbox (badness 1701) has occurred while \output is active []
+
+ [2 <./Figures/testR.jpg> <./Figures/scene.png> <./Figures/Coke_Image.png>] <Figures/Search_Window_Comparison.png, id=79, 682.55pt x 620.3175pt>
 File: Figures/Search_Window_Comparison.png Graphic file (type png)
  <use Figures/Search_Window_Comparison.png>
-Package pdftex.def Info: Figures/Search_Window_Comparison.png used on input line 177.
+Package pdftex.def Info: Figures/Search_Window_Comparison.png used on input line 186.
 (pdftex.def)             Requested size: 93.9212pt x 85.35826pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./Figures/scene.png> <./Figures/Coke_Image.png> <./Figures/Third_Result.png>] <Figures/Coke_Result.png, id=80, 759.83875pt x 722.7pt>
+ <Figures/Coke_Result.png, id=83, 759.83875pt x 722.7pt>
 File: Figures/Coke_Result.png Graphic file (type png)
  <use Figures/Coke_Result.png>
-Package pdftex.def Info: Figures/Coke_Result.png used on input line 189.
-(pdftex.def)             Requested size: 59.82602pt x 56.9055pt.
- <Figures/Disp_Vectors_1.png, id=83, 263.98625pt x 263.98625pt>
+Package pdftex.def Info: Figures/Coke_Result.png used on input line 198.
+(pdftex.def)             Requested size: 89.73903pt x 85.35826pt.
+ <Figures/Disp_Vectors_1.png, id=86, 263.98625pt x 263.98625pt>
 File: Figures/Disp_Vectors_1.png Graphic file (type png)
  <use Figures/Disp_Vectors_1.png>
-Package pdftex.def Info: Figures/Disp_Vectors_1.png used on input line 197.
+Package pdftex.def Info: Figures/Disp_Vectors_1.png used on input line 206.
 (pdftex.def)             Requested size: 85.35544pt x 85.35826pt.
- <Figures/SSDvsSAD.png, id=85, 711.65875pt x 334.24875pt>
+ [3 <./Figures/Third_Result.png> <./Figures/Search_Window_Comparison.png> <./Figures/Coke_Result.png> <./Figures/Disp_Vectors_1.png>] <Figures/SSDvsSAD.png, id=99, 711.65875pt x 334.24875pt>
 File: Figures/SSDvsSAD.png Graphic file (type png)
  <use Figures/SSDvsSAD.png>
-Package pdftex.def Info: Figures/SSDvsSAD.png used on input line 215.
+Package pdftex.def Info: Figures/SSDvsSAD.png used on input line 224.
 (pdftex.def)             Requested size: 212.02245pt x 99.58464pt.
+ <Figures/Coke_Bottle.png, id=102, 250.9375pt x 331.2375pt>
+File: Figures/Coke_Bottle.png Graphic file (type png)
+ <use Figures/Coke_Bottle.png>
+Package pdftex.def Info: Figures/Coke_Bottle.png used on input line 234.
+(pdftex.def)             Requested size: 64.66402pt x 85.35826pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3 <./Figures/Search_Window_Comparison.png> <./Figures/Coke_Result.png> <./Figures/Disp_Vectors_1.png>] (/Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.bbl
+ (/Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.bbl [4 <./Figures/SSDvsSAD.png> <./Figures/Coke_Bottle.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 48.
@@ -805,29 +813,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--96
 \OT1/pcr/b/n/9 189486 -[] how -[] googles -[] self -[] driving -[] cars -[]
  []
 
-) [4 <./Figures/SSDvsSAD.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 253.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 253.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
+ [5
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (/Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 253.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 253.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 267.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 267.
 Package rerunfilecheck Info: File `David_Jamie_Robot_Eyes.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 253.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 267.
  ) 
 Here is how much of TeX's memory you used:
- 17019 strings out of 493089
- 319616 string characters out of 6134842
- 366399 words of memory out of 5000000
- 20125 multiletter control sequences out of 15000+600000
+ 17029 strings out of 493089
+ 319793 string characters out of 6134842
+ 366436 words of memory out of 5000000
+ 20131 multiletter control sequences out of 15000+600000
  31674 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,56p,566b,362s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,8n,56p,566b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.pdf (4 pages, 2805619 bytes).
+Output written on /Users/davidkenny/Documents/Robot_Eyes_Assignment/matlabrobot/Report/.texpadtmp/David_Jamie_Robot_Eyes.pdf (5 pages, 2815612 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 123 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 164 PDF objects out of 1000 (max. 8388607)
+ 133 compressed objects within 2 object streams
+ 33 named destinations out of 1000 (max. 500000)
+ 122 words of extra memory for PDF output out of 10000 (max. 10000000)
 
