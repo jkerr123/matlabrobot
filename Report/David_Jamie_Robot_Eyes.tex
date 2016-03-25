@@ -88,7 +88,7 @@ The team was given the task of creating a disparity map from a pair of stereo im
 \section{Introduction}
 \vspace{-1ex}
 
-The assignment required the team to acquire new knowledge of computer vision by producing their own disparity map from scratch using Matlab. We were encouraged to experiment with variables and publish our results of the findings. This report details the experiments that the team performed and the notable results that were acquired from them. 
+The assignment required the team to acquire new knowledge of computer vision by producing their own disparity map from scratch using Matlab. We were encouraged to experiment with variables and publish the results of the findings. This report details the experiments that the team performed and the notable results that were acquired from them. 
 
 %%%%%%%%%%%
 %%%%%%%%%%%
@@ -100,24 +100,20 @@ A disparity map \cite{disparitymap} is used to show the difference between a pai
 
 The disparity value is the value of the shift required to get the minimum sum of squared differences \cite{introssd} for that pixel or section of the image. 
 
-Stereo pairs are images typically taken with only a slight difference in the distance of the cameras. Preferably the camera settings should be the same and the hardware should be the same as well to ensure that the images are similar. 
+Stereo pairs are images typically taken with only a slight difference in the placement of the cameras. Preferably the camera settings should be the same and the hardware should be the same as well to ensure that the images are as similar as possible.
 
-Another reason that this image was selected for testing was due to their not being many pixels present to test.
-
+The information gained from the disparity map will be useful to robots and machinery to provide extra depth information to base movements or actions on for example google car \cite{googlecar}.  
 
 %%%%%%%%%%%
 %%%%%%%%%%%
 \section{Description of Algorithm}
 \vspace{-1ex}
 
-The team used a brute force method to gain their results using this method meant that the run time was extremely high due the fact that a disparity value had to be calculated for every pixel of the image. 
+The team used a brute force method to gain their results using this method meant that the run time was extremely high due the fact of a disparity value having to be calculated for every pixel of the image with no shortcuts. 
 
-This was a problem when the team was testing their algorithm. Also since we were learning at the same time it didn't help as a simple error could take in excess of 10 minutes to produce a result even on a 100 x 100 image which lowered the teams productivity. 
-
-
+This was a problem when the team were testing their program. Also since we were learning at the same time it didn't help as a simple error could take in excess of 10 minutes to produce a result even on a 100 x 100 image which lowered the teams productivity. 
 
 %TODO:Add another potential algorithms.
-
 
 The team discovered an algorithm called ENCC \cite{ENCC} which produces an estimate of disparity with sub pixel accuracy. This could have been used in place of the brute force method to create a disparity map but may not have had the same accuracy. 
 
@@ -134,7 +130,7 @@ The team used the stereo images provided on the VLE to create their program. The
     \caption{Bookcase}~\label{fig:testR}
 \end{figure} 
 
-The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to there being an obvious deviation of layers in the image. The image is also has a small resolution too which means that it won't take long to produce a result.  
+The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to there being an obvious deviation of layers in the image. The image also has a small resolution too which means that it won't take long to produce a result.  
 
 \begin{figure}[H]
 \centering
@@ -142,7 +138,7 @@ The other pair that the team used was the "Scene" pair which we had seen used a 
     \caption{Scene}~\label{fig:scene}
 \end{figure} 
 
-We used our own image that we took with an iPhone 6S as well with an iPad box and a bottle of coke in front of it to indicate clear layers of depth in the stereo pair. 
+We used our own image which was taken with an iPhone 6S. It has an iPad box in the background and a bottle of coke in front of it to indicate clear layers of depth in the stereo pair.
 
 \begin{figure}[H]
 \centering
@@ -150,7 +146,7 @@ We used our own image that we took with an iPhone 6S as well with an iPad box an
     \caption{Our Image}~\label{fig:CokeScene}
 \end{figure} 
 
-The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using photoshop for testing purposes as it would take significantly less time to compute. On the left of figure \ref{fig:CokeScene} is the left and the right images overlaid. When the images were taken the team used a table to place the camera on to ensure that the position of the camera remained constant from taking the left and right image. We were aware that rotation of the camera wasn't fixed which could result in a sub optimal stereo pair.  
+The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using photoshop for testing purposes as it would take significantly less time to compute. On the left of figure \ref{fig:CokeScene} is the left and the right images overlaid. When the images were taken the team used a table to place the camera on to ensure that the position of the camera remained constant from taking the left and right image. We were aware that rotation of the camera wasn't fixed which can result in a sub optimal stereo pair.  
 
 %Example images + stereo pair that was taken in the labs. 
 
@@ -159,11 +155,12 @@ The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using ph
 
 \section{Results}
 \vspace{-1ex}
-The team created a program that worked out the disparity and outputted the SSD and disparity for one specific pixel. After this was done we then started trying to create a disparity map using the SSD values. 
+
+The team created a program that worked out the disparity and outputted the SSD(Sum of square differences) and disparity for one specific pixel. First of all we started using a search window of 15 x 15 and a support window of 3 x 3. After this was done we then started trying to create a disparity map using the SSD values for each pixel.  
 
 The team found that the SSD values were not correctly working since it was either producing a value of 0 or 255 as the final output this was confirmed when the disparity maps pixels were either black or white. 
 
-Then we found that the displacement values had to be converted into an 8 bit unsigned integer to be correctly displayed as a greyscale image. This then resulted in figure \ref{fig:Third_Result} being produced which was a step in the right direction. 
+ We found that the displacement values had to be converted into an 8 bit unsigned integer to be correctly displayed as a greyscale image. This then resulted in figure \ref{fig:Third_Result} being produced which was a step in the right direction. 
 
 It was noted that the black band shown in figure \ref{fig:Third_Result} is due to the padding that was added to image.  
 
@@ -173,7 +170,7 @@ It was noted that the black band shown in figure \ref{fig:Third_Result} is due t
     \caption{Greyscale Output}~\label{fig:Third_Result}
 \end{figure} 
 
-After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over two hours to run on a modern laptop and the end result wasn't what the team were hoping to produce. This wasted a lot of time. 
+After figure \ref{fig:Third_Result} was produced the team then ran a test using a 200 x 200 image. This test took over two hours to run on a modern laptop and the end result wasn't what the team were hoping to produce. This turned out to be a huge waste of productivity.  
  
 \begin{figure}[H]
 \centering
@@ -209,7 +206,7 @@ We then modified the code to calculate every pixel similar to what it was doing 
 
 A GUI was created during the run time of generating the maps to help run future tests this was built to increase our productivity during run time and also assist with testing. 
 
-One problem we realised that we had created was before we were looping through the whole right image and not just the search window which was the reason why our program was taking so long. 
+One problem we realised that we had created was before we were looping through the whole right image and not just the search window which was the reason why our program was taking so long. The padding was also removed as it was causing major problems when creating the maps.  
 
 The option for the SAD matching algorithm was added in to our program as well so we could run tests to compare them. 
 

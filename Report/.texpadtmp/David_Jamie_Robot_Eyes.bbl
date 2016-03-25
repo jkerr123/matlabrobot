@@ -86,4 +86,13 @@
 \url{http://ai.stanford.edu/~mitul/cs223b/dp.html}}
 
 
+\bibitem{googlecar}
+{Ryan Whitwam}. 2014.
+\newblock How Google's self-driving cars detect and avoid obstacles.
+\newblock   (2014).
+\newblock
+\showURL{%
+\url{http://www.extremetech.com/extreme/189486-how-googles-self-driving-cars-detect-and-avoid-obstacles}}
+
+
 \end{thebibliography}
