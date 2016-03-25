@@ -10,8 +10,8 @@ smallestCorVal= [];
  
  %setting the start and endpoints
  startingPoint = (supportSize - 1) / 2;
- endpointX = size(searchWindow,2)-1;
- endpointY = size(searchWindow,1)-1;
+ endpointX = size(searchWindow,2)-startingPoint;
+ endpointY = size(searchWindow,1)-startingPoint;
 
  %looping through the search window
 for y=startingPoint+1:endpointY
