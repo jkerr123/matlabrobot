@@ -113,8 +113,6 @@ The team used a brute force method to gain their results using this method meant
 
 This was a problem when the team were testing their program. Also since we were learning at the same time it didn't help as a simple error could take in excess of 10 minutes to produce a result even on a 100 x 100 image which lowered the teams productivity. 
 
-%TODO:Add another potential algorithms.
-
 The team discovered an algorithm called ENCC \cite{ENCC} which produces an estimate of disparity with sub pixel accuracy. This could have been used in place of the brute force method to create a disparity map but may not have had the same accuracy. 
 
 %%%%%%%%%%%
@@ -122,14 +120,13 @@ The team discovered an algorithm called ENCC \cite{ENCC} which produces an estim
 \section{Assumptions Made}
 \vspace{-1ex}
 
-The team implemented a rectification option that assumes that the images entered have already been rectified. The program will work with non rectified images as well if the tick box isn't checked. 
+The team implemented a rectification option that assumes that the images entered have already been rectified. The program will work with non rectified images as well if the tick box isn't checked. For testing purposes we assumed that the images provided from the VLE were all rectified.  
 
-
+We also assumed that the cameras used were identical with fixed focal length and aperture sizes.
 
 %%%%%%%%%%%
 %%%%%%%%%%%
 \section{Description of Images Used}
-\vspace{-1ex}
 
 The team used the stereo images provided on the VLE to create their program. The pair that was mainly used was the bookcase image shown in figure \ref{fig:testR}. It was selected as there are clear levels of depth between the different books and the team thought that they would produce a noteworthy result. 
 
@@ -139,7 +136,7 @@ The team used the stereo images provided on the VLE to create their program. The
     \caption{Bookcase}~\label{fig:testR}
 \end{figure} 
 
-The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to there being an obvious deviation of layers in the image. The image also has a small resolution too which means that it won't take long to produce a result.  
+The other pair that the team used was the "Scene" pair which we had seen used a lot in the computer vision community \cite{sceneusage} \cite{sceneusage2} for various benchmark tests including disparity maps. We believe that this is due to there being an obvious deviation of layers in the image. The image also has a small resolution too which means that it won't take long to produce a result. We also sourced images online \cite{dataset}.  
 
 \begin{figure}[H]
 \centering
@@ -227,7 +224,7 @@ The SAD matching algorithm was added into our program as well so we could run te
 
 Figure \ref{fig:SSDvsSAD} shows the difference between using SSD and SAD on the pentagon image. The disparity maps colours were mapped using the pink colormap function as well to produce a clearer visualisation. In this situation we believe that SAD produced a more accurate representation of depth in the image. 
 
-The team then ran the SAD algorithm on the Coke bottle image and produced our final output of figure \ref{fig:Coke_Bottle}. Which clearly shows the bottle in front of the iPad box. 
+The team then ran the SAD algorithm on the Coke bottle image and produced our final output of figure \ref{fig:Coke_Bottle}. Which clearly shows the bottle in front of the iPad box. The mapping used a search window size of 9.
 
  \begin{figure}[H]
 \centering

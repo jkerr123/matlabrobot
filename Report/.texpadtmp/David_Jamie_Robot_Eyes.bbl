@@ -32,6 +32,15 @@
 \ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
 \ifx \showURL      \undefined \def \showURL       #1{#1}          \fi
 
+\bibitem{dataset}
+{Alexander Vandenberg-Rodes Daniel~Scharstein} {and} {Rick Szeliski}. 2003.
+\newblock 2003 Stereo datasets with ground truth.
+\newblock   (2003).
+\newblock
+\showURL{%
+\url{http://vision.middlebury.edu/stereo/data/scenes2003/}}
+
+
 \bibitem{introssd}
 {Alessandro~Verri Emanuele~Trucco}. 1998.
 \newblock {\em Introductory techniques for 3D - Computer Vision}.

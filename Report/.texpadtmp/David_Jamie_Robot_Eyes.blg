@@ -5,57 +5,71 @@ The style file: ../SIGCHI-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: ../RobotEyes.bib
-Warning--entry type for "googlecar" isn't style-file defined
+Warning--entry type for "dataset" isn't style-file defined
 --line 11 of file ../RobotEyes.bib
+Warning--entry type for "googlecar" isn't style-file defined
+--line 21 of file ../RobotEyes.bib
 Warning--entry type for "sceneusage2" isn't style-file defined
---line 32 of file ../RobotEyes.bib
+--line 42 of file ../RobotEyes.bib
 Warning--entry type for "sceneusage" isn't style-file defined
---line 43 of file ../RobotEyes.bib
+--line 53 of file ../RobotEyes.bib
 Warning--entry type for "githublink" isn't style-file defined
---line 62 of file ../RobotEyes.bib
+--line 72 of file ../RobotEyes.bib
 Warning--entry type for "disparitymap" isn't style-file defined
---line 73 of file ../RobotEyes.bib
+--line 83 of file ../RobotEyes.bib
+Name 1 in "Daniel Scharstein, Alexander Vandenberg-Rodes, and Rick Szeliski" has a comma at the end for entry dataset
+while executing---line 6403 of file ../SIGCHI-Reference-Format.bst
+Name 1 in "Daniel Scharstein, Alexander Vandenberg-Rodes, and Rick Szeliski" has a comma at the end for entry dataset
+while executing---line 6403 of file ../SIGCHI-Reference-Format.bst
+Name 1 in "Daniel Scharstein, Alexander Vandenberg-Rodes, and Rick Szeliski" has a comma at the end for entry dataset
+while executing---line 6403 of file ../SIGCHI-Reference-Format.bst
+Name 1 in "Daniel Scharstein, Alexander Vandenberg-Rodes, and Rick Szeliski" has a comma at the end for entry dataset
+while executing---line 6495 of file ../SIGCHI-Reference-Format.bst
+Name 1 in "Daniel Scharstein, Alexander Vandenberg-Rodes, and Rick Szeliski" has a comma at the end for entry dataset
+while executing---line 6495 of file ../SIGCHI-Reference-Format.bst
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Name 1 in "Daniel Scharstein, Alexander Vandenberg-Rodes, and Rick Szeliski" has a comma at the end for entry dataset
+while executing---line 6679 of file ../SIGCHI-Reference-Format.bst
 Warning--empty address in introssd
-You've used 7 entries,
+You've used 8 entries,
             5283 wiz_defined-function locations,
-            1253 strings with 15281 characters,
-and the built_in function-call counts, 8674 in all, are:
-= -- 1117
-> -- 118
+            1258 strings with 15446 characters,
+and the built_in function-call counts, 9961 in all, are:
+= -- 1283
+> -- 146
 < -- 0
-+ -- 29
-- -- 421
-* -- 572
-:= -- 888
-add.period$ -- 37
-call.type$ -- 7
-change.case$ -- 37
-chr.to.int$ -- 7
-cite$ -- 8
-duplicate$ -- 348
-empty$ -- 264
-format.name$ -- 51
-if$ -- 1559
++ -- 38
+- -- 485
+* -- 665
+:= -- 1024
+add.period$ -- 42
+call.type$ -- 8
+change.case$ -- 43
+chr.to.int$ -- 8
+cite$ -- 9
+duplicate$ -- 396
+empty$ -- 301
+format.name$ -- 66
+if$ -- 1792
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 2
-newline$ -- 95
-num.names$ -- 42
-pop$ -- 151
+newline$ -- 104
+num.names$ -- 48
+pop$ -- 172
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 74
 quote$ -- 0
-skip$ -- 88
+skip$ -- 102
 stack$ -- 0
-substring$ -- 1757
-swap$ -- 14
-text.length$ -- 752
+substring$ -- 2003
+swap$ -- 16
+text.length$ -- 857
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 59
+type$ -- 68
 warning$ -- 1
-while$ -- 48
+while$ -- 55
 width$ -- 0
-write$ -- 136
-(There were 6 warnings)
+write$ -- 151
+(There were 6 error messages)
