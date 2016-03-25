@@ -1,9 +1,12 @@
 function supportWindow = getSupportWindow( image, x,y, size )
-%GETSUPPORTWINDOW Summary of this function goes here
-%   Detailed explanation goes here
+% gets a small support window from either the left image, or the search
+% window
 
 
+% changes the size variable to make sure our x,y coords are in the centre
+% of the window
 size = (size-1)/2;
+
 supportWindow = image(y-size:y+size, x-size:x+size);
 
 

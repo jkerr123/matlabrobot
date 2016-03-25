@@ -39,8 +39,8 @@ for xL=1+imageLpad:width-imageLpad
         %writing the disparity vector to the disparity map
         dispMap(yL, xL) = pixelDisp(1,2);                
                        
-           
-           waitbar(xL / (width+imageLpad)) 
+        %update the progress bar to show progress  
+        waitbar(xL / (width+imageLpad)) 
     end
 
 end
