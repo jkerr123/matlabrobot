@@ -162,7 +162,7 @@ The image was scaled down from a resolution of 3024 x 4032 to 150 x 200 using ph
 \section{Results}
 \vspace{-1ex}
 
-The team created a program that worked out the disparity and outputted the SSD(Sum of square differences) and disparity for one specific pixel. First of all we started using a search window of 15 x 15 and a support window of 3 x 3. After this was done we then started trying to create a disparity map using the SSD values for each pixel.  
+The team created a program that worked out the disparity and output the SSD(Sum of square differences) and disparity for one specific pixel. First of all we started using a search window of 15 x 15 and a support window of 3 x 3. After this was done we then started trying to create a disparity map using the SSD values for each pixel.  
 
 The team found that the SSD values were not correctly working since it was either producing a value of 0 or 255 as the final output this was confirmed when the disparity maps pixels were either black or white. 
 
@@ -214,7 +214,7 @@ A GUI was created during the run time of generating the maps to help run future 
 
 One issue that we had created previously was that we were looping through the whole right image and not just the search window which was the reason why our program was taking so long. The padding was also removed as it was causing major problems when creating the maps. A combination of these two actions majorly reduced the running time of the program.    
 
-The SAD matching algorithm was added into our program as well so we could run tests to compare SSD to SAD. 
+The SAD (Sum of absolute differences) matching algorithm was added into our program as well so we could run tests to compare SSD to SAD. 
 
  \begin{figure}[H]
 \centering
